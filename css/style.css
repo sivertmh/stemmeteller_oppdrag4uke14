@@ -1,3 +1,7 @@
+body {
+    
+}
+
 .parti {
     background-color: antiquewhite;
 }
@@ -8,4 +12,13 @@
     border-color: black;
     padding: 10px;
     text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar > * {
+    margin: 2vh;
 }

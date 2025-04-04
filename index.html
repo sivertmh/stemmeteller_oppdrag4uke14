@@ -6,9 +6,16 @@
     <title>Stemmeteller</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js" defer></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 </head>
 <body>
-    <h1>Stemmeteller Erikstad Kommune</h1>
+    <!--Toppen av siden, kommunevåpenet og overskrift-->
+        <div class="navbar">
+        <img src="./media/erikstad_komm.svg" alt="Erikstads kommunevåpen" width="100px">
+        <h1>Stemmeteller Erikstad Kommune</h1>
+    </div>
 
     <!--Parti 1-->
     <div class="parti">
@@ -23,6 +30,9 @@
     <button id="stemHoyreBtn" class="voteBtn" onclick="stemHoyre()">Stem Høyre</button>
     <p>Stemmer: <span id="stemHoyre">0</span></p>
     </div>
+
+    <!--Resultat, et kakediagram-->
+    <canvas id="valgResultat" style=" width: 100%; max-width: 700px;"></canvas>
 
 </body>
 </html>

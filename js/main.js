@@ -20,3 +20,29 @@ function stemHoyre(){
     StemHr.textContent = HrStemmer;
     localStorage.setItem("HrStemmer", HrStemmer);
 }
+
+// Diagram
+
+var xValues = ["Arbeiderpartiet", "Høyre"];
+var yValues = [ApStemmer, HrStemmer];
+var barColors = [
+  "#ef3340",
+  "#086af1",
+];
+
+new Chart("valgResultat", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Resultat fra årets valg"
+    }
+  }
+});
