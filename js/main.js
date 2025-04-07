@@ -7,6 +7,7 @@ function stemAp(){
     ApStemmer++;
     StemAp.textContent = ApStemmer;
     localStorage.setItem("ApStemmer", ApStemmer);
+    oppdaterDiagram();
 }
 
 // Høyre
@@ -19,11 +20,13 @@ function stemHoyre(){
     HrStemmer++;
     StemHr.textContent = HrStemmer;
     localStorage.setItem("HrStemmer", HrStemmer);
+    oppdaterDiagram();
 }
 
 // Diagram
 
-var xValues = ["Arbeiderpartiet", "Høyre"];
+function oppdaterDiagram () {
+  var xValues = ["Arbeiderpartiet", "Høyre"];
 var yValues = [ApStemmer, HrStemmer];
 var barColors = [
   "#ef3340",
@@ -46,3 +49,6 @@ new Chart("valgResultat", {
     }
   }
 });
+}
+
+oppdaterDiagram();
