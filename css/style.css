@@ -1,20 +1,41 @@
-.parti {
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-  }
-
-.voteBtn {
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-  }
+body {
+  margin: 0;
+}
 
 .navbar {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  background-color: #282828;
 }
 
 .navbar > * {
-    margin: 2vh;
+padding: 1.5vh;
+margin: 0.5vh;
+}
+
+h1 {
+color: #EBDBB2;
+}
+
+.pageContent > * {
+  display: flex;
+  flex-direction: row;
+}
+
+.partiboks {
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 1vw;
+    width: 15vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-radius: 2vw;
+  }
+
+.allePartibokser {
+  display: flex;
+  flex-direction: row;
+    
 }

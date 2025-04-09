@@ -11,27 +11,28 @@
     </script>
 </head>
 <body>
-    <!--Toppen av siden, kommunevåpenet og overskrift-->
+    <!--toppen av siden, kommunevåpenet og overskrift-->
     <div class="navbar">
-        <img src="./media/erikstad_komm.svg" alt="Erikstads kommunevåpen" width="100px">
+        <a href="index.html"><img src="./media/erikstad_komm_red.svg" alt="Erikstads kommunevåpen" width="100px"></a>
         <h1>Stemmeteller Erikstad Kommune</h1>
     </div>
 
-    <!--Parti 1-->
-    <div class="parti">
-    <h2><span><img src="./media/arbeiderpartiet_logo.svg" alt="Arbeiderpartiets logo" width="50px"></span>Arbeiderpartiet</h2>
-    <button id="stemApBtn" class="voteBtn" onclick="stemAp()">Stem Arbeiderpartiet</button>
-    <p>Stemmer: <span id="stemAp">0</span></p>
+<div class="pageContent">
+    <div class="allePartibokser">
+        <div class="partiboks" onclick="stemAp()">
+            <img src="./media/arbeiderpartiet_logo.svg" alt="Arbeiderpartiets logo" width="50px">
+            <h2>Arbeiderpartiet</h2>
+            <p>Stemmer: <span id="stemAp">0</span></p>
+        </div>
+        <div class="partiboks" onclick="stemHoyre()">
+            <img src="./media/hoyre_logo.svg" alt="Høyres logo" width="50px">
+            <h2>Høyre</h2>
+            <p>Stemmer: <span id="stemHoyre">0</span></p>
+        </div>
     </div>
 
-    <!--Parti 2-->
-    <div class="parti">
-    <h2><span><img src="./media/hoyre_logo.svg" alt="Høyres logo" width="50px"></span>Høyre</h2> 
-    <button id="stemHoyreBtn" class="voteBtn" onclick="stemHoyre()">Stem Høyre</button>
-    <p>Stemmer: <span id="stemHoyre">0</span></p>
-    </div>
-
-    <!--Resultat, et kakediagram-->
+    <!--kakediagram-->
     <canvas id="valgResultat" style=" width: 100%; max-width: 700px;"></canvas>
+</div>
 </body>
 </html>
