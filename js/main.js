@@ -1,4 +1,4 @@
-// Generell funskjon for stemmeknapp
+// Generell funskjon for stemmeknapp (ikke i bruk, vet ikke om jeg får implementert den)
 function stem(stemParti, stemmerAntall){
     stemmerAntall++;
     stemParti.textContent = stemmerAntall;
@@ -33,7 +33,7 @@ function stemHoyre(){
 // Sp
 let StemSp = document.getElementById("stemSp");
 let antallSpStemmer = localStorage.getItem("antallSpStemmer") ? parseInt(localStorage.getItem("antallSpStemmer")) : 0;
-stemSp.textContent = antallSpStemmer;
+StemSp.textContent = antallSpStemmer;
 
 function stemSp(){
   antallSpStemmer++;
@@ -42,15 +42,29 @@ function stemSp(){
   oppdaterDiagram();
 }
 
+// Frp
+
+let StemFrp = document.getElementById("stemFrpKnapp");
+let antallFrpStemmer = localStorage.getItem("antallFrpStemmer") ? parseInt(localStorage.getItem("antallFrpStemmer")) : 0;
+StemFrp.textContent = antallFrpStemmer;
+
+function stemFrp(){
+  antallFrpStemmer++;
+  StemFrp.textContent = antallFrpStemmer;
+  localStorage.setItem("antallFrpStemmer", antallFrpStemmer);
+  oppdaterDiagram();
+}
+
 // Diagram
 
 function oppdaterDiagram () {
-  var xValues = ["Arbeiderpartiet", "Høyre", "Senterpartiet"];
-var yValues = [ApStemmer, HrStemmer, antallSpStemmer];
+  var xValues = ["Arbeiderpartiet", "Høyre", "Senterpartiet", "Fremskrittspartiet"];
+var yValues = [ApStemmer, HrStemmer, antallSpStemmer, antallFrpStemmer];
 var barColors = [
   "#ef3340",
   "#086af1",
   "#00843d",
+  "#d40f14"
 ];
 
 new Chart("valgResultat", {
@@ -64,8 +78,8 @@ new Chart("valgResultat", {
   },
   options: {
     title: {
-      display: true,
-      text: "Resultat fra årets valg"
+      display: false,
+      text: "Resultater fra årets valg"
     }
   }
 });

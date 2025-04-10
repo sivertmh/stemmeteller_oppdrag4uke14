@@ -7,6 +7,7 @@ body {
   align-items: center;
   background-color: #282828;
   margin-bottom: 2vw;
+  width: 100vw;
 }
 
 .navbar > * {
@@ -15,7 +16,11 @@ margin: 0.5vh;
 height: 6.5vw;
 }
 
-h1 {color: #EBDBB2;}
+h1 {color: #EBDBB2; font-size: 2vw;}
+
+h2 {font-size: 1.5vw;}
+
+p{font-size: 0.75vw;}
 
 .pageContent {
   display: flex;

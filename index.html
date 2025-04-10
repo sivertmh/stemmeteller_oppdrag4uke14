@@ -13,22 +13,28 @@
 <body>
     <!--toppen av siden, kommunevåpenet og overskrift-->
     <div class="navbar">
-        <a href="index.html"><img src="./media/erikstad_komm_red.svg" alt="Erikstads kommunevåpen" width="100px"></a>
-        <h1>Stemmeteller Erikstad Kommune</h1>
+        <a href="index.html"><img src="./media/erikstad_komm_red.svg" alt="Erikstads kommunevåpen" style="width: 5vw;"></a>
+        <h1>Erikstad Kommune</h1>
     </div>
 
 <div class="pageContent">
-    <h2>Partiene du kan stemme på<br><span style="font-size:12px; font-weight: normal;">Trykk på for å stemme</span></h2>
     <div class="allePartibokser">
-        
+        <div style="width: 35vw;">
+            <h2 style="margin-left: 10vw;">Partiene du kan stemme på<br><span style="font-weight: normal;"><p style="margin-left: 5vw;">(Trykk på for å stemme)</p></span></h2>
+        </div>
         <!--legg inn nye partier under denne linjen (den kommenterte koden er en mal)-->
         <!-- 
-        <div class="partiboks" onclick="">
-            <img src="./media/#.svg" alt="Logoen til #" width="50px">
+        <div class="partiboks" onclick="stem#()">
+            <img src="./media/#.svg" alt="Logoen til #">
             <h2>Partinavn</h2>
             <p>Stemmer: <span id="stem#">0</span></p>
         </div> 
         -->
+        <div class="partiboks" onclick="stemFrp()">
+            <img src="./media/frp_logo.png" alt="Logoen til Fremskrittspartiet">
+            <h2>Fremskrittspartiet</h2>
+            <p>Stemmer: <span id="stemFrpKnapp">0</span></p>
+        </div> 
         <div class="partiboks" onclick="stemSp()">
             <img class="partiLogo" src="./media/sp_logoUnedited.svg" alt="Logoen til Senterpartiet">
             <h2>Senterpartiet</h2>
@@ -47,7 +53,10 @@
     </div>
 
     <!--kakediagram-->
-    <canvas id="valgResultat" style=" width: 100%; max-width: 700px;"></canvas>
+    <div>
+        <h2 style="text-align: center;">Resultater fra årets valg</h2>
+        <canvas id="valgResultat" style=" width: 50vw;" canvas>
+    </div>
 </div>
 </body>
 </html>
