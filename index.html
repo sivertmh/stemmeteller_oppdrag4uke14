@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stemmeteller</title>
+    <title>Erikstad Kommune - Stemmeteller</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js" defer></script>
     <script
@@ -18,14 +18,29 @@
     </div>
 
 <div class="pageContent">
+    <h2>Partiene du kan stemme på<br><span style="font-size:12px; font-weight: normal;">Trykk på for å stemme</span></h2>
     <div class="allePartibokser">
+        
+        <!--legg inn nye partier under denne linjen (den kommenterte koden er en mal)-->
+        <!-- 
+        <div class="partiboks" onclick="">
+            <img src="./media/#.svg" alt="Logoen til #" width="50px">
+            <h2>Partinavn</h2>
+            <p>Stemmer: <span id="stem#">0</span></p>
+        </div> 
+        -->
+        <div class="partiboks" onclick="stemSp()">
+            <img class="partiLogo" src="./media/sp_logoUnedited.svg" alt="Logoen til Senterpartiet">
+            <h2>Senterpartiet</h2>
+            <p>Stemmer: <span id="stemSp">0</span></p>
+        </div> 
         <div class="partiboks" onclick="stemAp()">
-            <img src="./media/arbeiderpartiet_logo.svg" alt="Arbeiderpartiets logo" width="50px">
+            <img class="partiLogo" src="./media/arbeiderpartiet_logo.svg" alt="Logoen til Arbeiderpartiet">
             <h2>Arbeiderpartiet</h2>
             <p>Stemmer: <span id="stemAp">0</span></p>
         </div>
         <div class="partiboks" onclick="stemHoyre()">
-            <img src="./media/hoyre_logo.svg" alt="Høyres logo" width="50px">
+            <img class="partiLogo" src="./media/hoyre_logo.svg" alt="Logoen til Høyre">
             <h2>Høyre</h2>
             <p>Stemmer: <span id="stemHoyre">0</span></p>
         </div>

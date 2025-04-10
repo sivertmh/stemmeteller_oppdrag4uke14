@@ -6,20 +6,27 @@ body {
   display: flex;
   align-items: center;
   background-color: #282828;
+  margin-bottom: 2vw;
 }
 
 .navbar > * {
-padding: 1.5vh;
+padding: 1vh;
 margin: 0.5vh;
+height: 6.5vw;
 }
 
-h1 {
-color: #EBDBB2;
-}
+h1 {color: #EBDBB2;}
 
-.pageContent > * {
+.pageContent {
   display: flex;
   flex-direction: row;
+}
+
+.allePartibokser {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  width: 50vw;
 }
 
 .partiboks {
@@ -32,10 +39,14 @@ color: #EBDBB2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     border-radius: 2vw;
+    border-style: solid; border-color: white;
   }
 
-.allePartibokser {
-  display: flex;
-  flex-direction: row;
-    
+.partiboks:hover {
+  border-style: solid; border-color: gray;
 }
+
+.partiLogo {
+  height: 5vw;
+}
+
