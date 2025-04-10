@@ -1,4 +1,4 @@
-// Generell funskjon for stemmeknapp (ikke i bruk, vet ikke om jeg får implementert den)
+// Generell funskjon for stemmeknapp (ikke i bruk, vet ikke om jeg rekker å få implementert den)
 function stem(stemParti, stemmerAntall){
     stemmerAntall++;
     stemParti.textContent = stemmerAntall;
@@ -6,6 +6,7 @@ function stem(stemParti, stemmerAntall){
     oppdaterDiagram();
 }
 
+// Under er koden til å stemme på de forskjellige partiene
 // Ap
 let StemAp = document.getElementById("stemAp");
 let ApStemmer = localStorage.getItem("ApStemmer") ? parseInt(localStorage.getItem("ApStemmer")) : 0;
